@@ -3,17 +3,282 @@
 <head>
     <title>{{title}}</title>
     {{!-- <link rel="stylesheet" href="style.css"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: orange;
-            color: red;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .page {
+            position: relative;
+            overflow: hidden;
+            height: 11.69in;
+        }
+
+        .page-header {
+            background: #4187A0;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: .2in .5in;
+            font-size: 16px;
+        }
+
+        .page-header .header__left {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .page-header .header__left img {
+            display: flex;
+            flex-direction: row;
+            margin-right: 0.1in;
+        }
+
+        .page-header .header__left .company-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header .incident-block {
+            text-align: right;
+        }
+
+        .page-footer {
+            background: #4187A0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            display: flex;
+            padding: .2in .5in;
+            justify-content: space-between;
+        }
+
+        .incident__time {
+            font-size: 11px;
+        }
+
+        .page-section {
+            border-bottom: 2px solid #707070;
+            margin-top: .1in;
+
+        }
+
+        .page-section__container {
+            padding: 0 .5in;
+        }
+
+        .page-section:last-child {
+            border-bottom: none;
+        }
+
+        .page-section__head {
+            color: #227b97;
+            font-size: 14px;
+            margin-bottom: .1in;
+        }
+
+        .page-section .image-data {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            margin: .2in 0;
+        }
+
+        .page-section .image-data .image {
+            margin-right: .3in;
+        }
+
+        .page-section .image-data .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .page-section .image-data .data .product_name {
+            font-weight: bold;
+        }
+
+        .page-section .image-data .data .label_code {
+            font-size: 12px;
+        }
+
+        table {
+            margin-bottom: .1in;
+        }
+
+        table tr {
+            font-size: 12px;
+        }
+
+        table tr td {
+            min-width: 2in;
+        }
+
+        .ver-table {
+            border-collapse: collapse;
+            margin-bottom: .2in;
+        }
+
+        .ver-table tr td {
+            min-width: auto;
+            padding: .1in;
+
         }
     </style>
 
 </head>
 
 <body>
-    Deep{{title}}
+    <div id="page1" class="page landscape">
+        <div class="page-header">
+            <div class="header__left">
+                <img width="40" height="40"
+                    src="https://futurestud.io/blog/content/images/2018/06/axios-file-download.jpg">
+                <div class="company-name">United Spirits Limited</div>
+            </div>
+            <div class="incident-block">
+                <div class="incident__id">
+                    Incident ID: 415
+                </div>
+                <div class="incident__time">
+                    Time of Reporting November 19
+                </div>
+            </div>
+        </div>
+        <div class="page-footer">
+            <div class="footer__left">
+                Powered by Chkfake
+            </div>
+            <div class="footer__right">
+                1/4
+            </div>
+        </div>
+        <div class="page-section__container">
+            <div class="page-section">
+                <div class="image-data">
+                    <div class="image">
+                        <img width="90" height="90"
+                            src="https://futurestud.io/blog/content/images/2018/06/axios-file-download.jpg">
+                    </div>
+                    <div class="data">
+                        <div class="product_name">McDowell's No.1 180ml</div>
+                        <div class="product_code">USL</div>
+                        <div class="label_code">Unique label code: 7EXCTYS</div>
+                    </div>
+                </div>
+                <div class="page-section__head">
+                    Reported By
+                </div>
+                <table>
+                    <tr class="page-section__row">
+                        <td class="key">Username</td>
+                        <td class="value">rahul</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">User relationship with USL</td>
+                        <td class="value">Investigator</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">User contact Details</td>
+                        <td class="value">XXXXXXXX67</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-section">
+                <div class="page-section__head">
+                    Location details:
+                </div>
+                <table>
+                    <tr class="page-section__row">
+                        <td class="key">Online Retailer Name</td>
+                        <td class="value">: Flipkart</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">Seller Name</td>
+                        <td class="value">: Acorn Wine</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">Product link</td>
+                        <td class="value">: https://www.flipkart.com/product/mcdowells-no-1-180ml/</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-section">
+                <div class="page-section__head">
+                    Verification details:
+                </div>
+                <table>
+                    <tr class="page-section__row">
+                        <td class="key">Verification Result</td>
+                        <td class="value">: Fake</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">Reference Code</td>
+                        <td class="value">: Unique code not valid</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="key">Verified at</td>
+                        <td class="value">: Bengaluru, Karnataka</td>
+                    </tr>
+                </table>
+
+                <table class="ver-table" border="1" border-collapse="true">
+                    <tr class="page-section__row">
+                        <th class="no">CHK No</th>
+                        <th class="chk">Security CHKs</th>
+                        <th class="result">Result</th>
+                        <th class="description">Description</th>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="no">CHK1</td>
+                        <td class="chk">Unique code</td>
+                        <td class="result">Passed</td>
+                        <td class="description">Muzli is a new-tab Chrome extension that instantly
+                            delivers relevant design stories and inspiration.</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="no">CHK2</td>
+                        <td class="chk">Pack Size</td>
+                        <td class="result">Failed</td>
+                        <td class="description">Muzli is a new-tab Chrome extension </td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="no">CHK3</td>
+                        <td class="chk">Izon dots</td>
+                        <td class="result">Skipped</td>
+                        <td class="description">Delivers relevant design stories and inspiration.</td>
+                    </tr>
+                    <tr class="page-section__row">
+                        <td class="no">CHK4</td>
+                        <td class="chk">Izon 180 switch</td>
+                        <td class="result">Skipped</td>
+                        <td class="description">UI and UX are two design terms that often get used
+                            in the wrong context. If we're not designing with a
+                            user in mind, then there is no problem to be solved.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div id="page2" class="page landscape">
+        Page 2
+    </div>
+    <div id="page2" class="page landscape">
+        Page 3
+    </div>
+    <div id="page2" class="page landscape">
+        Page 4
+    </div>
+    <div id="page2" class="page landscape">
+        Page 5
+    </div>
 </body>
 
 </html>
